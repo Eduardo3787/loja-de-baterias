@@ -1,0 +1,447 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fonte global */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #000;
+    padding-top: 100px;
+  }
+  
+  /* Container centralizado */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #000;
+    transition: background 0.3s;
+    padding: 30px 0;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo img {
+    max-height: 60px;
+  }
+  
+  /* Botão Hamburger */
+  .menu-toggle {
+    display: none;
+    color: #fff;
+    font-size: 1.8em;
+    cursor: pointer;
+  }
+  
+  /* Navegação */
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #7f00ff;
+  }
+  
+  .scrolled {
+    background: transparent !important;
+  }
+  
+  /* Seção Início */
+  .inicio {
+    padding: 283px 0;
+    text-align: center;
+    background-image: url('../imagens/sincerely-media-aUPLLA6o_3I-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .inicio h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+  }
+  
+  .inicio p {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+  }
+  
+  /* Botão animado (WhatsApp) */
+  .btn-whatsapp-animado {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+    background-color: #7f00ff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+  }
+  
+  .btn-whatsapp-animado i {
+    font-size: 1.3em;
+  }
+  
+  /* Espaço extra para o botão na seção Sobre */
+  .sobre a.btn-whatsapp-animado.sobre-btn {
+    margin-top: 30px;
+  }
+  
+  /* Efeito bounce */
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* Seção Sobre */
+  .sobre {
+    padding: 204px 0;
+    text-align: center;
+    background-image: url('../imagens/adrien-olichon-R2OM3BvN-Uo-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .sobre h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .sobre p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Seção Serviços */
+  .servicos {
+    padding: 150px 0;
+    text-align: center;
+    background-image: url('../imagens/sincerely-media-aUPLLA6o_3I-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .servicos h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+  }
+  
+  .servicos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .servico-item {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+  }
+  
+  .servico-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .servico-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .servico-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  /* Seção Produtos */
+  .produtos {
+    padding: 150px 0;
+    text-align: center;
+    background-image: url('../imagens/adrien-olichon-R2OM3BvN-Uo-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .produtos h2 {
+    margin-bottom: 20px;
+  }
+  
+  .produtos p {
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+    line-height: 1.4;
+  }
+  
+  /* Carousel de Produtos */
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 50px;
+    width: 100%;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Exibe 3 imagens por vez com gap */
+  .carousel-slide img {
+    flex: 0 0 calc(33.33% - 10px);
+    max-width: calc(33.33% - 10px);
+    margin: 0 5px;
+    transition: transform 0.5s ease, border 0.5s ease;
+  }
+  
+  /* Imagem ativa: a primeira imagem visível (índice = counter) */
+  .carousel-slide img.active {
+    border: 1px solid #7f00ff;
+    border-radius: 10px;
+    transform: scale(1.1);
+    z-index: 1;
+  }
+  
+  /* Botões do Carousel de Produtos */
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(127, 0, 255, 0.7);
+    border: none;
+    padding: 10px;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  
+  /* Seção Contato */
+  .contato {
+    padding: 105px 0;
+    text-align: center;
+    background-image: url('../imagens/sincerely-media-aUPLLA6o_3I-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .contato h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  /* Carousel de Contato (Depoimentos) */
+  .contato-carousel {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .contato-slide {
+    display: none;
+    font-size: 1.2em;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+  }
+  
+  .contato-slide:first-child {
+    display: block;
+  }
+  
+  .contato-slide h3 {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* Botões do Carousel de Contato */
+  .contato-prev,
+  .contato-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(127, 0, 255, 0.7);
+    border: none;
+    padding: 10px;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .contato-prev {
+    left: -50px;
+  }
+  
+  .contato-next {
+    right: -50px;
+  }
+  
+  /* Footer */
+  footer {
+    background-image: url('../imagens/adrien-olichon-R2OM3BvN-Uo-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  footer p {
+    margin-bottom: 10px;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsividade para Mobile */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    /* Exibe o botão hamburger */
+    .menu-toggle {
+      display: block;
+    }
+    
+    /* Menu mobile: navegação em bloco */
+    nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #000;
+      display: none;
+    }
+    
+    nav.active {
+      display: block;
+    }
+    
+    nav ul {
+      flex-direction: column;
+    }
+    
+    nav ul li {
+      margin: 10px 0;
+      text-align: center;
+    }
+    
+    .inicio {
+      padding: 150px 20px;
+    }
+    
+    .inicio h1 {
+      font-size: 2em;
+    }
+    
+    .inicio p {
+      font-size: 1em;
+    }
+    
+    .sobre, .servicos, .produtos, .contato {
+      padding: 60px 20px;
+    }
+    
+    /* No mobile, o carousel de produtos exibirá 100% da largura */
+    .carousel-slide img {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin: 5px 0;
+    }
+    
+    /* Mantém as setas de produtos mesmo no mobile (com tamanho reduzido) */
+    .prev, .next {
+      font-size: 1.2em;
+      padding: 8px;
+    }
+    
+    /* Carousel de Contato: setinhas ajustadas */
+    .contato-prev, .contato-next {
+      left: 10px;
+      right: 10px;
+      font-size: 1.2em;
+    }
+  }
+  
