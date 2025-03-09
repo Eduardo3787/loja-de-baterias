@@ -1,11 +1,11 @@
-/* Reset básico */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Fonte global */
+  
   body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
@@ -14,14 +14,14 @@
     padding-top: 100px;
   }
   
-  /* Container centralizado */
+  
   .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
   }
   
-  /* Header */
+ 
   header {
     position: fixed;
     top: 0;
@@ -42,7 +42,7 @@
     max-height: 60px;
   }
   
-  /* Botão Hamburger */
+  
   .menu-toggle {
     display: none;
     color: #fff;
@@ -50,7 +50,7 @@
     cursor: pointer;
   }
   
-  /* Navegação */
+  
   nav ul {
     list-style: none;
     display: flex;
@@ -75,7 +75,7 @@
     background: transparent !important;
   }
   
-  /* Seção Início */
+  
   .inicio {
     padding: 283px 0;
     text-align: center;
@@ -95,7 +95,7 @@
     margin-bottom: 20px;
   }
   
-  /* Botão animado (WhatsApp) */
+  
   .btn-whatsapp-animado {
     display: inline-flex;
     align-items: center;
@@ -115,12 +115,12 @@
     font-size: 1.3em;
   }
   
-  /* Espaço extra para o botão na seção Sobre */
+  
   .sobre a.btn-whatsapp-animado.sobre-btn {
     margin-top: 30px;
   }
   
-  /* Efeito bounce */
+ 
   @keyframes bounce {
     0% { transform: translateY(0); }
     25% { transform: translateY(-5px); }
@@ -129,7 +129,7 @@
     100% { transform: translateY(0); }
   }
   
-  /* Seção Sobre */
+  
   .sobre {
     padding: 204px 0;
     text-align: center;
@@ -152,7 +152,7 @@
     margin-right: auto;
   }
   
-  /* Seção Serviços */
+  
   .servicos {
     padding: 150px 0;
     text-align: center;
@@ -207,7 +207,7 @@
     padding: 10px 0;
   }
   
-  /* Seção Produtos */
+  
   .produtos {
     padding: 150px 0;
     text-align: center;
@@ -228,7 +228,7 @@
     line-height: 1.4;
   }
   
-  /* Carousel de Produtos */
+  
   .carousel {
     position: relative;
     overflow: hidden;
@@ -241,7 +241,7 @@
     transition: transform 0.5s ease-in-out;
   }
   
-  /* Exibe 3 imagens por vez com gap */
+  
   .carousel-slide img {
     flex: 0 0 calc(33.33% - 10px);
     max-width: calc(33.33% - 10px);
@@ -249,7 +249,7 @@
     transition: transform 0.5s ease, border 0.5s ease;
   }
   
-  /* Imagem ativa: a primeira imagem visível (índice = counter) */
+  
   .carousel-slide img.active {
     border: 1px solid #7f00ff;
     border-radius: 10px;
@@ -257,7 +257,7 @@
     z-index: 1;
   }
   
-  /* Botões do Carousel de Produtos */
+ 
   .prev,
   .next {
     position: absolute;
@@ -285,7 +285,7 @@
     pointer-events: none;
   }
   
-  /* Seção Contato */
+  
   .contato {
     padding: 105px 0;
     text-align: center;
@@ -300,7 +300,7 @@
     margin-bottom: 20px;
   }
   
-  /* Carousel de Contato (Depoimentos) */
+  
   .contato-carousel {
     position: relative;
     max-width: 700px;
@@ -326,7 +326,7 @@
     font-weight: bold;
   }
   
-  /* Botões do Carousel de Contato */
+  
   .contato-prev,
   .contato-next {
     position: absolute;
@@ -349,7 +349,7 @@
     right: -50px;
   }
   
-  /* Footer */
+  
   footer {
     background-image: url('../imagens/adrien-olichon-R2OM3BvN-Uo-unsplash.jpg');
     background-size: cover;
@@ -373,19 +373,19 @@
     text-decoration: underline;
   }
   
-  /* Responsividade para Mobile */
+  
   @media (max-width: 768px) {
     .header-container {
       flex-direction: row;
       justify-content: space-between;
     }
     
-    /* Exibe o botão hamburger */
+    
     .menu-toggle {
       display: block;
     }
     
-    /* Menu mobile: navegação em bloco */
+   
     nav {
       position: absolute;
       top: 100%;
@@ -424,20 +424,20 @@
       padding: 60px 20px;
     }
     
-    /* No mobile, o carousel de produtos exibirá 100% da largura */
+   
     .carousel-slide img {
       flex: 0 0 100%;
       max-width: 100%;
       margin: 5px 0;
     }
     
-    /* Mantém as setas de produtos mesmo no mobile (com tamanho reduzido) */
+  
     .prev, .next {
       font-size: 1.2em;
       padding: 8px;
     }
     
-    /* Carousel de Contato: setinhas ajustadas */
+    
     .contato-prev, .contato-next {
       left: 10px;
       right: 10px;

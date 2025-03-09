@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // MENU: SCROLL SUAVE
+    
     const navLinks = document.querySelectorAll('nav ul li a');
     navLinks.forEach(link => {
       link.addEventListener('click', function(e) {
@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   
-    // MENU MOBILE: Toggle para mostrar/ocultar nav
+    
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
     menuToggle.addEventListener('click', () => {
       nav.classList.toggle('active');
     });
   
-    // HEADER: Transparência ao rolar
+    
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   
-    // CAROUSEL DE PRODUTOS (3 imagens visíveis em desktop)
+    
     const carousel = document.querySelector('.carousel');
     const carouselSlide = document.querySelector('.carousel-slide');
     const carouselImages = document.querySelectorAll('.carousel-slide img');
@@ -47,22 +47,22 @@ document.addEventListener('DOMContentLoaded', function() {
       const imageWidth = carousel.clientWidth / visible;
       carouselSlide.style.transform = 'translateX(' + (-counter * imageWidth) + 'px)';
   
-      // Remove "active" de todas as imagens
+      
       carouselImages.forEach(img => img.classList.remove('active'));
   
-      // A imagem ativa será a primeira visível (índice = counter)
+    
       if (carouselImages[counter]) {
         carouselImages[counter].classList.add('active');
       }
   
-      // Desabilita seta esquerda se estiver no início
+      
       if (counter === 0) {
         prevBtn.classList.add('disabled');
       } else {
         prevBtn.classList.remove('disabled');
       }
   
-      // Desabilita seta direita se não houver mais imagens para avançar
+      
       if (counter >= total - visible) {
         nextBtn.classList.add('disabled');
       } else {
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     window.addEventListener('resize', updateCarousel);
   
-    // CAROUSEL DE CONTATO (Depoimentos)
+    
     const contatoSlides = document.querySelectorAll('.contato-slide');
     const contatoPrevBtn = document.querySelector('.contato-prev');
     const contatoNextBtn = document.querySelector('.contato-next');
