@@ -1,447 +1,242 @@
+/* reset mínimo */
+* { margin:0; padding:0; box-sizing:border-box }
+body { font-family: Arial, sans-serif; }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* ajustar o caminho e nome da sua imagem: */
+  background: url('../assets/delivery.png') center/cover no-repeat;
+  display: flex;
+  justify-content: flex-end; /* empurra pra baixo */
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 3rem; /* espaço abaixo da imagem */
+}
+
+.hero__contacts {
+  display: flex;
+  gap: 2rem;
+}
+
+.contact-item {
+  text-align: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  animation: float 3s ease-in-out infinite;
+}
+.btn i {
+  font-size: 1.25rem;
+  display: inline-block;
+  animation: heartbeat 1.5s infinite;
+}
+
+.btn--whatsapp { background: #28A745 }
+.btn--phone    { background: #28A745 }
+
+.contact-number {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: black;
+  text-shadow: 0 0 4px rgba(0,0,0,0.7);
+}
+
+/* Animações */
+@keyframes float {
+  0%,100% { transform: translateY(0) }
+  50%     { transform: translateY(-6px) }
+}
+@keyframes heartbeat {
+  0%,100% { transform: scale(1) }
+  25%,75%  { transform: scale(1.2) }
+  40%,60%  { transform: scale(0.9) }
+}
+
+/* responsivo */
+@media (max-width: 600px) {
+  .hero__contacts { flex-direction: column; gap:1rem }
+}
+
+/* Seção localização */
+.location {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: 4rem 0;
+}
+
+/* Lado imagem */
+.location__image {
+  flex: 1 1 50%;
+}
+.location__image img {
+  display: block;
+  width: 100%;
+  height: 490px;
+  object-fit: cover;
+}
+
+/* Lado mapa */
+.location__map {
+  flex: 1 1 50%;
+  padding: 2rem;
+  background: #f9f9f9;
+}
+.location__map h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  color: #222;
+}
+.location__map p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.location__map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+/* Responsivo */
+@media (max-width: 800px) {
+  .location {
+    flex-direction: column;
   }
-  
-  
-  body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    color: #fff;
-    background-color: #000;
-    padding-top: 100px;
+  .location__map {
+    padding: 1rem;
   }
-  
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
- 
-  header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    background-color: #000;
-    transition: background 0.3s;
-    padding: 30px 0;
-  }
-  
-  .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .logo img {
-    max-height: 60px;
-  }
-  
-  
-  .menu-toggle {
-    display: none;
-    color: #fff;
-    font-size: 1.8em;
-    cursor: pointer;
-  }
-  
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  nav ul li {
-    margin-left: 20px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    color: #7f00ff;
-  }
-  
-  .scrolled {
-    background: transparent !important;
-  }
-  
-  
-  .inicio {
-    padding: 283px 0;
-    text-align: center;
-    background-image: url('../imagens/sincerely-media-aUPLLA6o_3I-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .inicio h1 {
-    font-size: 2.8em;
-    margin-bottom: 20px;
-  }
-  
-  .inicio p {
-    font-size: 1.3em;
-    margin-bottom: 20px;
-  }
-  
-  
-  .btn-whatsapp-animado {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 1.2em;
-    color: #fff;
-    text-decoration: none;
-    background-color: #7f00ff;
-    padding: 12px 20px;
-    border-radius: 5px;
-    transition: transform 0.3s;
-    cursor: pointer;
-    animation: bounce 1.5s infinite;
-  }
-  
-  .btn-whatsapp-animado i {
-    font-size: 1.3em;
-  }
-  
-  
-  .sobre a.btn-whatsapp-animado.sobre-btn {
-    margin-top: 30px;
-  }
-  
- 
-  @keyframes bounce {
-    0% { transform: translateY(0); }
-    25% { transform: translateY(-5px); }
-    50% { transform: translateY(0); }
-    75% { transform: translateY(5px); }
-    100% { transform: translateY(0); }
-  }
-  
-  
-  .sobre {
-    padding: 204px 0;
-    text-align: center;
-    background-image: url('../imagens/adrien-olichon-R2OM3BvN-Uo-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .sobre h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-  }
-  
-  .sobre p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  
-  .servicos {
-    padding: 150px 0;
-    text-align: center;
-    background-image: url('../imagens/sincerely-media-aUPLLA6o_3I-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .servicos h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-  }
-  
-  .servicos-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .servico-item {
-    position: relative;
-    overflow: hidden;
-    width: 300px;
+  .location__map iframe {
     height: 200px;
   }
-  
-  .servico-image {
-    width: 100%;
-    height: 100%;
-    position: relative;
+}
+
+/* Seção “Receba sua bateria onde você estiver” */
+.delivery-everywhere {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.delivery-everywhere__title {
+  font-size: 2rem;
+  color: black; /* azul forte */
+  margin-bottom: 2rem;
+}
+
+.delivery-everywhere__image img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Grid de cards */
+.delivery-everywhere__cards {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.delivery-everywhere__cards .card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  max-width: 300px;
+  text-align: left;
+}
+
+.delivery-everywhere__cards .card h3 {
+  font-size: 1.25rem;
+  color: #0047AB;
+  margin-bottom: 0.75rem;
+}
+
+.delivery-everywhere__cards .card p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .delivery-everywhere__cards {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .servico-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+  .delivery-everywhere__cards .card {
+    max-width: 90%;
   }
-  
-  .servico-item:hover img {
-    transform: scale(1.1);
-  }
-  
-  .overlay {
-    position: absolute;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.6);
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-  }
-  
-  
-  .produtos {
-    padding: 150px 0;
-    text-align: center;
-    background-image: url('../imagens/adrien-olichon-R2OM3BvN-Uo-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .produtos h2 {
-    margin-bottom: 20px;
-  }
-  
-  .produtos p {
-    margin-bottom: 60px;
-    max-width: 700px;
-    margin: 0 auto 60px auto;
-    line-height: 1.4;
-  }
-  
-  
-  .carousel {
-    position: relative;
-    overflow: hidden;
-    margin: 0 auto 50px;
-    width: 100%;
-  }
-  
-  .carousel-slide {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  
-  .carousel-slide img {
-    flex: 0 0 calc(33.33% - 10px);
-    max-width: calc(33.33% - 10px);
-    margin: 0 5px;
-    transition: transform 0.5s ease, border 0.5s ease;
-  }
-  
-  
-  .carousel-slide img.active {
-    border: 1px solid #7f00ff;
-    border-radius: 10px;
-    transform: scale(1.1);
-    z-index: 1;
-  }
-  
- 
-  .prev,
-  .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(127, 0, 255, 0.7);
-    border: none;
-    padding: 10px;
-    color: #fff;
-    font-size: 1.5em;
-    cursor: pointer;
-    z-index: 10;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
-  
-  .disabled {
-    opacity: 0.5;
-    pointer-events: none;
-  }
-  
-  
-  .contato {
-    padding: 105px 0;
-    text-align: center;
-    background-image: url('../imagens/sincerely-media-aUPLLA6o_3I-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .contato h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-  }
-  
-  
-  .contato-carousel {
-    position: relative;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  
-  .contato-slide {
-    display: none;
-    font-size: 1.2em;
-    background: rgba(0, 0, 0, 0.5);
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: left;
-  }
-  
-  .contato-slide:first-child {
-    display: block;
-  }
-  
-  .contato-slide h3 {
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  
-  .contato-prev,
-  .contato-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(127, 0, 255, 0.7);
-    border: none;
-    padding: 10px;
-    color: #fff;
-    font-size: 1.5em;
-    cursor: pointer;
-    z-index: 10;
-  }
-  
-  .contato-prev {
-    left: -50px;
-  }
-  
-  .contato-next {
-    right: -50px;
-  }
-  
-  
-  footer {
-    background-image: url('../imagens/adrien-olichon-R2OM3BvN-Uo-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    text-align: center;
-    padding: 40px 0;
-  }
-  
-  footer p {
-    margin-bottom: 10px;
-  }
-  
-  footer a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
-  
-  @media (max-width: 768px) {
-    .header-container {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    
-    
-    .menu-toggle {
-      display: block;
-    }
-    
-   
-    nav {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: #000;
-      display: none;
-    }
-    
-    nav.active {
-      display: block;
-    }
-    
-    nav ul {
-      flex-direction: column;
-    }
-    
-    nav ul li {
-      margin: 10px 0;
-      text-align: center;
-    }
-    
-    .inicio {
-      padding: 150px 20px;
-    }
-    
-    .inicio h1 {
-      font-size: 2em;
-    }
-    
-    .inicio p {
-      font-size: 1em;
-    }
-    
-    .sobre, .servicos, .produtos, .contato {
-      padding: 60px 20px;
-    }
-    
-   
-    .carousel-slide img {
-      flex: 0 0 100%;
-      max-width: 100%;
-      margin: 5px 0;
-    }
-    
-  
-    .prev, .next {
-      font-size: 1.2em;
-      padding: 8px;
-    }
-    
-    
-    .contato-prev, .contato-next {
-      left: 10px;
-      right: 10px;
-      font-size: 1.2em;
-    }
-  }
-  
+}
+
+/* === Seção de Linhas de Baterias === */
+.battery-lines {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #fff;
+}
+.battery-lines h2 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+/* Grid de itens */
+.battery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;           /* menos espaço entre eles */
+  justify-items: center;
+}
+
+/* Cada item (card + label) */
+.battery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Quadrado com ícone */
+.battery-card {
+  background: #000;
+  border: 2px solid #FFA500;
+  border-radius: 8px;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+.battery-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Ícone grande */
+.battery-card i {
+  font-size: 2rem;
+  color: #FFA500;
+}
+
+/* Legenda abaixo do card */
+.battery-label {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #222;
+  font-weight: 600;
+  text-align: center;
+}
